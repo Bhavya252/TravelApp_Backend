@@ -18,11 +18,12 @@ const hotelSchema = new mongoose.Schema({
     numberOfStudies:{ type: Number, required: true },
     hostName :{ type: String, required: true },
     hostJoinedOn:{ type: String, required: true },
-    ammenities:{ type: Array, required: true },
+    ameneties:{ type: Array, required: true },
     healthAndSafety:{ type: Array, required: true },
     houseRules:{ type: Array, required: true },
     propertyType:{ type: String, required: true },
     isCancelable:{ type: Boolean, required: true },
+    
 
 });
 
