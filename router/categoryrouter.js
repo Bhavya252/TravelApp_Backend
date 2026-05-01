@@ -1,5 +1,5 @@
 import express from 'express';
-import CategoryHandler from '../controllers/CategoryHandler.js';
+import CategoryHandler from '../controllers/categoryHandler.js';
 
 
 const router = express.Router();
