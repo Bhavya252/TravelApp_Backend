@@ -9,11 +9,21 @@ import Razorpay from "razorpay";
 
 
 const app = express();
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://travel-app-frontend-nine-opal.vercel.app",
+  "https://travel-app-frontend-iki1bbndo-bhavyas-projects-34599f13.vercel.app"
+];
+
 app.use(cors({
-    origin: "*",
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true
 }));
 
 app.options("/", cors());
