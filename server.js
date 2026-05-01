@@ -10,7 +10,7 @@ import Razorpay from "razorpay";
 
 const app = express();
 app.use(cors({
-    origin: "https://travel-app-frontend-nine-opal.vercel.app",
+    origin: "*",
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
